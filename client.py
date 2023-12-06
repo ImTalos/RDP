@@ -28,7 +28,7 @@ class Client:
                 size = len(screenshot_data)
                 sock.sendto(b"SIZE %d" % size, address)
                 self.send_image(address, screenshot_data, size)
-                #logging.debug("finished sending image chunks")
+                logging.debug("finished sending image chunks")
                 sock.sendto(b"END", address)
                 time.sleep(0.005)
 

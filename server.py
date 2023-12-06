@@ -77,7 +77,7 @@ class Server:
                 try:
                     packet_size = 8192
                     data, addr = sock.recvfrom(packet_size)
-                    self.addr_ = addr  # register address
+                    self.addr_ = addr 
                     if data.startswith(b"SIZE"):
                         file_size = int(data.split()[1])
                         logging.debug(f"got size {file_size}")
